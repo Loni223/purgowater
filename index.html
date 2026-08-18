@@ -1,0 +1,2378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Purg&#333; Water &mdash; Home Water Filtration in NYC, Westchester, New Jersey &amp; Connecticut</title>
+<meta name="description" content="Purgō Water designs, installs and maintains home water filtration and softening systems across New York City, Westchester, New Jersey and Connecticut. Fitted by our own licensed, in-house trained technicians.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2.5S6 13.2 6 20a10 10 0 0 0 20 0c0-6.8-10-17.5-10-17.5z' fill='%23CFE0DA' stroke='%2314322C' stroke-width='1.8'/%3E%3Cpath d='M11 21.8v-4.4l5-3.7 5 3.7v4.4z' fill='none' stroke='%2314322C' stroke-width='1.8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,0..100,0..1;1,9..144,400..700,0..100,0..1&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Purgō Water — shared stylesheet
+   Palette: spruce / moss / mineral tile / milk / brass
+   ============================================================ */
+
+:root{
+  --ink:        #14322C;
+  --ink-2:      #2F5A4E;
+  --moss:       #6E8F7D;
+  --tile:       #CFE0DA;
+  --tile-deep:  #A8C6BC;
+  --milk:       #FBF8F2;
+  --paper:      #F2ECDF;
+  --brass:      #C1862A;
+  --brass-soft: #F0DFBB;
+  --rust:       #A0523A;
+  --text:       #22302B;
+  --muted:      #647570;
+  --line:       #DBD3C4;
+
+  --r-sm: 10px;
+  --r-md: 18px;
+  --r-lg: 28px;
+  --r-xl: 40px;
+
+  --shadow-soft: 0 2px 4px rgba(20,50,44,.04), 0 12px 32px rgba(20,50,44,.07);
+  --shadow-lift: 0 4px 8px rgba(20,50,44,.05), 0 24px 56px rgba(20,50,44,.11);
+
+  --display: "Fraunces", Georgia, "Times New Roman", serif;
+  --body: "Karla", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --wrap: 1160px;
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+
+body{
+  margin:0;
+  background:var(--milk);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  position:relative;
+}
+
+/* barely-there paper grain, keeps flat colour from feeling sterile */
+body::before{
+  content:"";
+  position:fixed; inset:0;
+  pointer-events:none; z-index:0;
+  opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+
+main, header, footer{ position:relative; z-index:1; }
+
+img{ max-width:100%; display:block; }
+
+a{ color:var(--ink-2); text-decoration-thickness:1px; text-underline-offset:3px; }
+a:hover{ color:var(--brass); }
+
+:focus-visible{
+  outline:3px solid var(--brass);
+  outline-offset:3px;
+  border-radius:4px;
+}
+
+/* ---------- type ---------- */
+
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-variation-settings:"SOFT" 60, "WONK" 1, "opsz" 40;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.12;
+  letter-spacing:-.015em;
+  margin:0 0 .5em;
+  text-wrap:balance;
+}
+
+h1{ font-size:clamp(2.5rem, 6vw, 4.1rem); }
+h2{ font-size:clamp(1.9rem, 4vw, 2.9rem); }
+h3{ font-size:clamp(1.25rem, 2.2vw, 1.55rem); }
+h4{ font-size:1.08rem; }
+
+p{ margin:0 0 1.1em; max-width:66ch; }
+p:last-child{ margin-bottom:0; }
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:.74rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--moss);
+  margin:0 0 1rem;
+  display:flex; align-items:center; gap:.6rem;
+}
+.eyebrow::before{
+  content:""; width:26px; height:1px; background:var(--tile-deep); flex:none;
+}
+
+.lede{ font-size:1.16rem; color:var(--muted); max-width:60ch; }
+
+.latin{ font-style:italic; }
+
+/* ---------- layout ---------- */
+
+.wrap{ width:min(var(--wrap), calc(100% - 2.5rem)); margin-inline:auto; }
+
+section{ padding:clamp(3.5rem, 8vw, 6.5rem) 0; }
+
+.band-paper{ background:var(--paper); }
+.band-tile{ background:var(--tile); }
+.band-ink{ background:var(--ink); color:#DCE8E3; }
+.band-ink h2,.band-ink h3{ color:var(--milk); }
+.band-ink .lede{ color:#A9C2BA; }
+.band-ink .eyebrow{ color:var(--tile-deep); }
+
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:clamp(2rem, 5vw, 4.5rem);
+  align-items:center;
+}
+
+.section-head{ max-width:62ch; margin-bottom:3rem; }
+
+.grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+.grid-2{ display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; }
+.grid-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; }
+
+/* ---------- buttons ---------- */
+
+.btn{
+  display:inline-flex; align-items:center; gap:.55rem;
+  font-family:var(--body); font-weight:700; font-size:.97rem;
+  padding:.92rem 1.6rem;
+  border-radius:999px;
+  border:1.5px solid transparent;
+  cursor:pointer;
+  text-decoration:none;
+  transition:transform .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+.btn:hover{ transform:translateY(-2px); }
+.btn-primary{ background:var(--ink); color:var(--milk); box-shadow:var(--shadow-soft); }
+.btn-primary:hover{ background:var(--ink-2); color:var(--milk); }
+.btn-ghost{ background:transparent; color:var(--ink); border-color:var(--tile-deep); }
+.btn-ghost:hover{ background:var(--tile); color:var(--ink); }
+.btn-brass{ background:var(--brass); color:#fff; }
+.btn-brass:hover{ background:#A9741F; color:#fff; }
+.btn-light{ background:var(--milk); color:var(--ink); }
+.btn-light:hover{ background:#fff; color:var(--ink); }
+
+.btn-row{ display:flex; flex-wrap:wrap; gap:.85rem; margin-top:1.8rem; }
+
+/* ---------- header ---------- */
+
+.topbar{
+  background:var(--ink);
+  color:#B6CCC5;
+  font-family:var(--mono);
+  font-size:.74rem;
+  letter-spacing:.06em;
+}
+.topbar .wrap{
+  display:flex; justify-content:space-between; align-items:center;
+  gap:1rem; padding:.55rem 0; flex-wrap:wrap;
+}
+.topbar a{ color:var(--brass-soft); text-decoration:none; }
+.topbar a:hover{ color:#fff; }
+
+.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(251,248,242,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site-header .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1.5rem; padding:.85rem 0;
+}
+
+.brand{ display:flex; align-items:center; gap:.6rem; text-decoration:none; flex:none; }
+.brand-mark{ width:34px; height:34px; flex:none; }
+.brand-name{
+  font-family:var(--display);
+  font-variation-settings:"SOFT" 80,"WONK" 1,"opsz" 40;
+  font-weight:600; font-size:1.5rem; color:var(--ink); line-height:1;
+}
+.brand-sub{
+  display:block; font-family:var(--mono); font-size:.6rem;
+  letter-spacing:.22em; text-transform:uppercase; color:var(--moss); margin-top:.22rem;
+}
+
+.nav{ display:flex; align-items:center; gap:.35rem; }
+.nav a{
+  font-size:.95rem; font-weight:600; color:var(--text);
+  text-decoration:none; padding:.5rem .75rem; border-radius:999px;
+}
+.nav a:hover{ background:var(--tile); color:var(--ink); }
+.nav a[aria-current="page"]{ background:var(--tile); color:var(--ink); }
+
+.nav-drop{ position:relative; }
+.nav-drop > button{
+  font:inherit; font-size:.95rem; font-weight:600; color:var(--text);
+  background:none; border:0; cursor:pointer;
+  padding:.5rem .75rem; border-radius:999px;
+  display:inline-flex; align-items:center; gap:.3rem;
+}
+.nav-drop > button:hover{ background:var(--tile); }
+.nav-drop menu{
+  position:absolute; top:calc(100% + .5rem); left:0; margin:0;
+  min-width:225px; padding:.45rem;
+  list-style:none;
+  background:var(--milk); border:1px solid var(--line);
+  border-radius:var(--r-md); box-shadow:var(--shadow-lift);
+  display:none;
+}
+.nav-drop[data-open="true"] menu{ display:block; }
+.nav-drop menu a{ display:block; padding:.55rem .7rem; border-radius:var(--r-sm); }
+
+.nav-cta{ display:flex; align-items:center; gap:.75rem; flex:none; }
+.nav-phone{
+  font-family:var(--mono); font-size:.9rem; font-weight:500;
+  color:var(--ink); text-decoration:none; white-space:nowrap;
+}
+
+.hamburger{
+  display:none; background:none; border:1.5px solid var(--line);
+  border-radius:var(--r-sm); width:44px; height:40px; cursor:pointer;
+  align-items:center; justify-content:center;
+}
+.hamburger span{ display:block; width:19px; height:1.5px; background:var(--ink); position:relative; }
+.hamburger span::before,.hamburger span::after{
+  content:""; position:absolute; left:0; width:19px; height:1.5px; background:var(--ink);
+}
+.hamburger span::before{ top:-6px; }
+.hamburger span::after{ top:6px; }
+
+/* ---------- hero ---------- */
+
+.hero{
+  padding:clamp(3rem, 7vw, 5.5rem) 0 clamp(3.5rem, 8vw, 6rem);
+  background:
+    radial-gradient(1100px 520px at 82% -8%, rgba(207,224,218,.85), transparent 62%),
+    radial-gradient(760px 460px at 5% 105%, rgba(240,223,187,.5), transparent 60%);
+}
+.hero .split{ align-items:center; }
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(transparent 62%, var(--brass-soft) 62%);
+}
+
+.trust-row{
+  display:flex; flex-wrap:wrap; gap:.5rem; margin-top:2.2rem;
+  padding-top:1.6rem; border-top:1px solid var(--line);
+}
+.chip{
+  display:inline-flex; align-items:center; gap:.4rem;
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.05em;
+  background:var(--milk); border:1px solid var(--line);
+  padding:.42rem .75rem; border-radius:999px; color:var(--ink-2);
+}
+.chip svg{ width:13px; height:13px; flex:none; }
+
+/* ---------- signature: tap report ---------- */
+
+.report{
+  background:var(--milk);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  box-shadow:var(--shadow-lift);
+  overflow:hidden;
+}
+.report-top{
+  background:var(--ink); color:var(--tile);
+  padding:1.1rem 1.5rem;
+  display:flex; justify-content:space-between; align-items:baseline; gap:1rem;
+}
+.report-top strong{
+  font-family:var(--display); font-size:1.12rem; color:var(--milk);
+  font-variation-settings:"SOFT" 70,"WONK" 1;
+}
+.report-top span{ font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; opacity:.75; }
+
+.report-body{ padding:1.5rem; }
+
+.report-label{
+  display:block; font-family:var(--mono); font-size:.7rem;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+  margin-bottom:.5rem;
+}
+
+.picker{ display:flex; flex-wrap:wrap; gap:.4rem; margin-bottom:1.4rem; }
+.picker button{
+  font:inherit; font-size:.87rem; font-weight:600;
+  padding:.5rem .85rem; border-radius:999px; cursor:pointer;
+  background:var(--milk); border:1.5px solid var(--line); color:var(--text);
+  transition:all .16s ease;
+}
+.picker button:hover{ border-color:var(--tile-deep); background:var(--tile); }
+.picker button[aria-pressed="true"]{ background:var(--ink); border-color:var(--ink); color:var(--milk); }
+
+.readout{ border-top:1px dashed var(--line); padding-top:1.2rem; }
+.readout p{ font-size:.96rem; }
+
+.metrics{ display:grid; grid-template-columns:repeat(3,1fr); gap:.65rem; margin:0 0 1.1rem; }
+.metric{
+  background:var(--paper); border-radius:var(--r-sm);
+  padding:.75rem .8rem; text-align:left;
+}
+.metric dt{
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--muted); margin-bottom:.25rem;
+}
+.metric dd{
+  margin:0; font-family:var(--mono); font-size:1.05rem;
+  font-weight:500; color:var(--ink); line-height:1.2;
+}
+.metric dd small{ display:block; font-size:.68rem; color:var(--moss); letter-spacing:0; margin-top:.15rem; }
+
+.tag-list{ display:flex; flex-wrap:wrap; gap:.35rem; margin:.2rem 0 1rem; padding:0; list-style:none; }
+.tag-list li{
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.04em;
+  border:1px solid var(--tile-deep); background:#fff;
+  border-radius:999px; padding:.25rem .6rem; color:var(--ink-2);
+}
+
+.rec{
+  background:var(--brass-soft);
+  border-radius:var(--r-md);
+  padding:.9rem 1rem;
+  font-size:.93rem;
+  display:flex; gap:.65rem; align-items:flex-start;
+}
+.rec svg{ width:18px; height:18px; flex:none; margin-top:2px; color:#8B6516; }
+.rec strong{ color:var(--ink); }
+
+.report-foot{
+  margin:0;
+  font-family:var(--mono); font-size:.68rem; color:var(--muted);
+  padding:.9rem 1.5rem; border-top:1px solid var(--line);
+  background:var(--paper); line-height:1.5;
+}
+
+/* ---------- cards ---------- */
+
+.card{
+  background:var(--milk);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  padding:2rem 1.8rem;
+  transition:transform .22s ease, box-shadow .22s ease;
+  display:flex; flex-direction:column;
+}
+.card:hover{ transform:translateY(-4px); box-shadow:var(--shadow-lift); }
+.card p{ font-size:.97rem; color:var(--muted); }
+.card ul{ margin:.4rem 0 1.4rem; padding-left:1.05rem; font-size:.94rem; color:var(--muted); }
+.card ul li{ margin-bottom:.35rem; }
+.card .card-link{
+  margin-top:auto; font-weight:700; font-size:.93rem;
+  text-decoration:none; color:var(--ink); display:inline-flex; gap:.35rem; align-items:center;
+}
+.card .card-link:hover{ color:var(--brass); gap:.6rem; }
+
+.card-icon{
+  width:52px; height:52px; border-radius:14px;
+  background:var(--tile); color:var(--ink);
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:1.2rem;
+}
+.card-icon svg{ width:26px; height:26px; }
+
+/* ---------- steps (a real sequence, so numbers earn their place) ---------- */
+
+.steps{ counter-reset:step; display:grid; gap:1.1rem; }
+.step{
+  display:grid; grid-template-columns:auto 1fr; gap:1.3rem;
+  align-items:start;
+  background:var(--milk); border:1px solid var(--line);
+  border-radius:var(--r-md); padding:1.5rem 1.6rem;
+}
+.step::before{
+  counter-increment:step;
+  content:counter(step,decimal-leading-zero);
+  font-family:var(--mono); font-size:.85rem; font-weight:500;
+  color:var(--brass);
+  background:var(--brass-soft);
+  width:40px; height:40px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+}
+.step h3{ font-size:1.15rem; margin-bottom:.3rem; }
+.step p{ font-size:.96rem; color:var(--muted); margin:0; }
+
+/* ---------- feature / product rows ---------- */
+
+.feature{
+  background:var(--milk); border:1px solid var(--line);
+  border-radius:var(--r-xl); padding:clamp(1.8rem,4vw,3rem);
+  box-shadow:var(--shadow-soft);
+}
+.price-was{
+  font-family:var(--mono); font-size:.85rem; color:var(--muted);
+  text-decoration:line-through;
+}
+.spec-list{ list-style:none; padding:0; margin:1.2rem 0; display:grid; gap:.55rem; }
+.spec-list li{
+  display:flex; gap:.6rem; align-items:flex-start;
+  font-size:.96rem; color:var(--text);
+}
+.spec-list li::before{
+  content:""; width:7px; height:7px; border-radius:50%;
+  background:var(--brass); flex:none; margin-top:.55rem;
+}
+
+.product{
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:clamp(1.5rem,4vw,3.5rem); align-items:center;
+  padding:clamp(1.8rem,4vw,2.6rem);
+  background:var(--milk); border:1px solid var(--line);
+  border-radius:var(--r-lg); margin-bottom:1.6rem;
+}
+.product:nth-child(even) .product-art{ order:-1; }
+.product-art{
+  background:var(--tile); border-radius:var(--r-md);
+  aspect-ratio:4/3; display:flex; align-items:center; justify-content:center;
+  padding:2rem;
+}
+.product-art svg{ width:100%; height:100%; max-height:230px; color:var(--ink); }
+.product h3{ margin-bottom:.15rem; }
+.product .kicker{
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--brass); margin-bottom:.5rem;
+}
+
+/* ---------- badges ---------- */
+
+.badge{
+  text-align:left; padding:1.5rem;
+  background:var(--milk); border-radius:var(--r-md); border:1px solid var(--line);
+}
+.badge svg{ width:26px; height:26px; color:var(--brass); margin-bottom:.8rem; }
+.badge h4{ margin-bottom:.35rem; }
+.badge p{ font-size:.9rem; color:var(--muted); margin:0; }
+
+/* ---------- service areas ---------- */
+
+.area-card{
+  background:var(--milk); border:1px solid var(--line);
+  border-radius:var(--r-md); padding:1.6rem; display:flex; flex-direction:column;
+}
+.area-card h3{ font-size:1.2rem; margin-bottom:.3rem; }
+.area-card .towns{
+  font-size:.9rem; color:var(--muted); margin:.6rem 0 1rem; line-height:1.6;
+}
+.area-card .water-note{
+  font-family:var(--mono); font-size:.72rem; color:var(--ink-2);
+  background:var(--tile); border-radius:var(--r-sm);
+  padding:.6rem .75rem; margin-top:auto; line-height:1.5;
+}
+
+/* ---------- faq ---------- */
+
+.faq{ max-width:820px; }
+.faq details{
+  border-bottom:1px solid var(--line);
+  padding:.4rem 0;
+}
+.faq summary{
+  cursor:pointer; list-style:none;
+  font-family:var(--display); font-weight:600; font-size:1.1rem;
+  font-variation-settings:"SOFT" 60,"WONK" 1;
+  color:var(--ink);
+  padding:1.05rem 2.5rem 1.05rem 0; position:relative;
+}
+.faq summary::-webkit-details-marker{ display:none; }
+.faq summary::after{
+  content:"+"; position:absolute; right:.4rem; top:50%; transform:translateY(-50%);
+  font-family:var(--mono); font-size:1.3rem; color:var(--brass); font-weight:400;
+}
+.faq details[open] summary::after{ content:"–"; }
+.faq details p{ padding:0 2.5rem 1.2rem 0; color:var(--muted); font-size:.98rem; }
+
+/* ---------- testimonials ---------- */
+
+.quote{
+  background:var(--milk); border:1px solid var(--line);
+  border-radius:var(--r-lg); padding:1.9rem;
+  display:flex; flex-direction:column;
+}
+.quote blockquote{
+  margin:0 0 1.2rem; font-family:var(--display); font-size:1.1rem;
+  font-variation-settings:"SOFT" 70,"WONK" 1; line-height:1.45; color:var(--ink);
+}
+.quote figcaption{ margin-top:auto; font-size:.87rem; color:var(--muted); }
+.quote figcaption strong{ color:var(--text); display:block; }
+.stars{ color:var(--brass); font-size:.85rem; letter-spacing:.15em; margin-bottom:.9rem; }
+
+/* ---------- cta ---------- */
+
+.cta-band{
+  background:var(--ink);
+  color:#CFE0DA;
+  border-radius:var(--r-xl);
+  padding:clamp(2.4rem,5vw,4rem);
+  text-align:center;
+}
+.cta-band h2{ color:var(--milk); }
+.cta-band p{ margin-inline:auto; color:#A9C2BA; }
+.cta-band .btn-row{ justify-content:center; }
+
+/* ---------- forms ---------- */
+
+.form-card{
+  background:var(--milk); border:1px solid var(--line);
+  border-radius:var(--r-lg); padding:clamp(1.6rem,4vw,2.4rem);
+  box-shadow:var(--shadow-soft);
+}
+.field{ margin-bottom:1.15rem; }
+.field label{
+  display:block; font-family:var(--mono); font-size:.7rem;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+  margin-bottom:.45rem;
+}
+.field input,.field select,.field textarea{
+  width:100%; font:inherit; font-size:1rem;
+  padding:.8rem .95rem;
+  border:1.5px solid var(--line); border-radius:var(--r-sm);
+  background:#fff; color:var(--text);
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--moss); outline:none;
+  box-shadow:0 0 0 3px rgba(110,143,125,.18);
+}
+.field textarea{ min-height:120px; resize:vertical; }
+.form-note{ font-size:.83rem; color:var(--muted); margin-top:1rem; }
+.form-ok{
+  display:none; background:var(--brass-soft); border-radius:var(--r-md);
+  padding:1rem 1.2rem; font-size:.95rem; margin-top:1rem;
+}
+.form-error{
+  display:none; background:#f6dede; border-radius:var(--r-md);
+  padding:1rem 1.2rem; font-size:.95rem; margin-top:1rem;
+}
+
+/* ---------- page header ---------- */
+
+.page-head{
+  background:var(--paper);
+  padding:clamp(2.6rem,6vw,4.5rem) 0 clamp(2.2rem,5vw,3.5rem);
+  border-bottom:1px solid var(--line);
+}
+.crumb{
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--moss); margin-bottom:.9rem;
+}
+.crumb a{ color:var(--moss); text-decoration:none; }
+.crumb a:hover{ color:var(--brass); }
+
+/* ---------- footer ---------- */
+
+.site-footer{
+  background:var(--ink); color:#9DBAB1;
+  padding:clamp(3rem,6vw,4.5rem) 0 2rem;
+  font-size:.94rem;
+}
+.site-footer h4{
+  color:var(--milk); font-family:var(--mono); font-size:.72rem;
+  letter-spacing:.16em; text-transform:uppercase; font-weight:500;
+  margin-bottom:1rem;
+}
+.site-footer a{ color:#9DBAB1; text-decoration:none; }
+.site-footer a:hover{ color:var(--brass-soft); }
+.site-footer ul{ list-style:none; padding:0; margin:0; display:grid; gap:.55rem; }
+.footer-grid{
+  display:grid; grid-template-columns:1.5fr 1fr 1fr 1.2fr;
+  gap:2.5rem; padding-bottom:2.5rem;
+}
+.footer-brand .brand-name{ color:var(--milk); }
+.footer-brand p{ font-size:.92rem; margin-top:1rem; max-width:34ch; }
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);
+  padding-top:1.5rem;
+  display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.05em; color:#7D9C93;
+}
+
+/* ---------- reveal ---------- */
+
+.reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.in{ opacity:1; transform:none; }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 980px){
+  .split,.product{ grid-template-columns:1fr; }
+  .product:nth-child(even) .product-art{ order:0; }
+  .grid-3,.grid-4{ grid-template-columns:repeat(2,1fr); }
+  .footer-grid{ grid-template-columns:1fr 1fr; }
+
+  .hamburger{ display:flex; }
+  .nav{
+    position:absolute; top:100%; left:0; right:0;
+    flex-direction:column; align-items:stretch; gap:.15rem;
+    background:var(--milk); border-bottom:1px solid var(--line);
+    padding:1rem 1.25rem 1.4rem; display:none;
+    box-shadow:var(--shadow-lift);
+  }
+  .site-header[data-menu="open"] .nav{ display:flex; }
+  .nav-drop menu{ position:static; display:block; box-shadow:none; border:0; padding-left:.8rem; background:none; }
+  .nav-drop > button{ width:100%; justify-content:space-between; }
+  .nav-phone{ display:none; }
+}
+
+@media (max-width: 620px){
+  body{ font-size:16px; }
+  .grid-3,.grid-4,.grid-2{ grid-template-columns:1fr; }
+  .metrics{ grid-template-columns:1fr; }
+  .footer-grid{ grid-template-columns:1fr; gap:2rem; }
+  .step{ grid-template-columns:1fr; gap:.9rem; }
+  .topbar .wrap{ justify-content:center; text-align:center; }
+  .btn{ width:100%; justify-content:center; }
+  .btn-row{ width:100%; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior:auto; }
+  *,*::before,*::after{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
+  .reveal{ opacity:1; transform:none; }
+}
+
+
+/* ============================================================
+   Water — motion layer
+   Waves, tide, fill and bubbles. All of it drawn as SVG, so it
+   scales, weighs nothing, and needs no image licensing.
+   Every animation here is switched off by prefers-reduced-motion
+   at the bottom of this file.
+   ============================================================ */
+
+/* ---------- tide: scroll progress as a rising water line ---------- */
+
+.tide{
+  position:fixed; top:0; left:0; right:0; height:4px;
+  z-index:200; pointer-events:none;
+  background:linear-gradient(90deg, var(--moss), var(--tile-deep) 45%, var(--brass) 100%);
+  width:0;
+  transition:width .12s linear;
+}
+.tide::after{
+  content:""; position:absolute; right:0; top:-2px;
+  width:8px; height:8px; border-radius:50%;
+  background:var(--brass);
+  box-shadow:0 0 0 4px rgba(193,134,42,.18);
+}
+
+/* ---------- wave edges on every colour band ---------- */
+
+.band-paper, .band-tile, .band-ink, .page-head, .hero{ position:relative; }
+.band-paper > .wrap, .band-tile > .wrap, .band-ink > .wrap, .page-head > .wrap{
+  position:relative; z-index:2;
+}
+
+.band-paper::before, .band-tile::before, .band-ink::before,
+.band-paper::after, .band-tile::after, .band-ink::after,
+.page-head::after{
+  content:"";
+  position:absolute; left:0; right:0;
+  height:52px;
+  background-repeat:repeat-x;
+  background-size:1200px 52px;
+  pointer-events:none;
+  z-index:1;
+}
+
+/* top edge — the band's own colour rising into the section above */
+.band-paper::before, .band-tile::before, .band-ink::before{
+  top:0;
+  transform:translateY(-99%) translateX(var(--sway, 0px));
+  animation:drift-a 26s linear infinite;
+}
+.band-paper::before{ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,32 C140,62 260,4 420,26 C580,48 700,66 860,38 C980,17 1090,6 1200,28 L1200,60 L0,60 Z' fill='%23F2ECDF'/%3E%3C/svg%3E"); }
+.band-tile::before{  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,32 C140,62 260,4 420,26 C580,48 700,66 860,38 C980,17 1090,6 1200,28 L1200,60 L0,60 Z' fill='%23CFE0DA'/%3E%3C/svg%3E"); }
+.band-ink::before{   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,32 C140,62 260,4 420,26 C580,48 700,66 860,38 C980,17 1090,6 1200,28 L1200,60 L0,60 Z' fill='%2314322C'/%3E%3C/svg%3E"); }
+
+/* bottom edge — the next section's milk pouring back in */
+.band-paper::after, .band-tile::after, .band-ink::after, .page-head::after{
+  bottom:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 60' preserveAspectRatio='none'%3E%3Cpath d='M0,32 C140,62 260,4 420,26 C580,48 700,66 860,38 C980,17 1090,6 1200,28 L1200,60 L0,60 Z' fill='%23FBF8F2'/%3E%3C/svg%3E");
+  transform:translateX(calc(var(--sway, 0px) * -0.7));
+  animation:drift-b 34s linear infinite;
+}
+
+.page-head{ border-bottom:0; padding-bottom:clamp(3.4rem,7vw,5rem); }
+
+@keyframes drift-a{ from{ background-position-x:0; }    to{ background-position-x:-1200px; } }
+@keyframes drift-b{ from{ background-position-x:0; }    to{ background-position-x:1200px; } }
+
+/* ---------- hero: light moving on water ---------- */
+
+.hero{ overflow:hidden; }
+.hero::after{
+  content:"";
+  position:absolute; inset:-20% -10% auto -10%;
+  height:120%;
+  pointer-events:none; z-index:0;
+  opacity:.5;
+  background:
+    radial-gradient(46% 30% at 22% 34%, rgba(255,255,255,.85), transparent 62%),
+    radial-gradient(38% 26% at 74% 58%, rgba(207,224,218,.75), transparent 66%),
+    radial-gradient(30% 22% at 52% 12%, rgba(240,223,187,.6), transparent 68%);
+  filter:blur(6px);
+  animation:caustics 26s ease-in-out infinite alternate;
+}
+.hero > .wrap{ position:relative; z-index:2; }
+
+@keyframes caustics{
+  0%   { transform:translate3d(0,0,0) scale(1); }
+  50%  { transform:translate3d(-3%,2%,0) scale(1.08); }
+  100% { transform:translate3d(2%,-2%,0) scale(1.03); }
+}
+
+/* ---------- product art: the tank fills as it scrolls in ---------- */
+
+.product-art{ position:relative; overflow:hidden; }
+.product-art > svg{ position:relative; z-index:2; }
+.product-art::before{
+  content:"";
+  position:absolute; left:-10%; right:-10%; bottom:0;
+  height:0; z-index:1;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M0,10 C40,20 70,2 110,9 C150,16 190,20 230,11 C260,4 280,3 300,9 L300,20 L0,20 Z' fill='rgba(126,163,146,0.55)'/%3E%3C/svg%3E") repeat-x top / 300px 18px,
+    linear-gradient(180deg, rgba(110,143,125,.42), rgba(20,50,44,.14));
+  transition:height 1.6s cubic-bezier(.22,.9,.24,1);
+  animation:crest 9s linear infinite;
+}
+.reveal.in .product-art::before{ height:48%; }
+
+@keyframes crest{ from{ background-position-x:0,0; } to{ background-position-x:300px,0; } }
+
+/* ---------- bubbles, in the dark bands only ---------- */
+
+.cta-band, .band-ink{ position:relative; overflow:hidden; }
+.cta-band > *{ position:relative; z-index:2; }
+
+.bubble{
+  position:absolute; bottom:-40px; z-index:1;
+  border-radius:50%;
+  background:radial-gradient(circle at 32% 28%, rgba(255,255,255,.5), rgba(255,255,255,.06) 62%);
+  border:1px solid rgba(255,255,255,.16);
+  opacity:0;
+  animation:rise linear infinite;
+  pointer-events:none;
+}
+
+@keyframes rise{
+  0%   { transform:translateY(0) translateX(0);      opacity:0; }
+  12%  { opacity:.7; }
+  50%  { transform:translateY(-52%) translateX(11px); }
+  88%  { opacity:.5; }
+  100% { transform:translateY(-108%) translateX(-7px); opacity:0; }
+}
+
+/* ---------- reveals surface rather than slide ---------- */
+
+.reveal{ transform:translateY(22px) scale(.995); transition:opacity .8s ease, transform .8s cubic-bezier(.2,.8,.25,1); }
+
+/* ---------- ripple on the region picker ---------- */
+
+.picker button{ position:relative; overflow:hidden; }
+.picker button::after{
+  content:""; position:absolute; left:50%; top:50%;
+  width:8px; height:8px; margin:-4px 0 0 -4px;
+  border-radius:50%; background:currentColor; opacity:0;
+  transform:scale(1);
+}
+.picker button:active::after{ animation:ripple .55s ease-out; }
+
+@keyframes ripple{
+  from{ opacity:.22; transform:scale(1); }
+  to{   opacity:0;   transform:scale(24); }
+}
+
+/* ---------- gallery ---------- */
+
+.gallery{ display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; }
+.gallery figure{
+  margin:0; border-radius:var(--r-md); overflow:hidden;
+  background:var(--tile); border:1px solid var(--line);
+  aspect-ratio:3/4; position:relative;
+  display:flex; align-items:center; justify-content:center;
+}
+.gallery figure img{ width:100%; height:100%; object-fit:cover; }
+.gallery figcaption{
+  position:absolute; left:0; right:0; bottom:0;
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.08em;
+  color:var(--ink-2); background:rgba(251,248,242,.86);
+  padding:.5rem .65rem; text-align:center;
+}
+.gallery .slot svg{ width:44%; color:var(--ink); opacity:.5; }
+
+@media (max-width: 900px){ .gallery{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width: 520px){ .gallery{ grid-template-columns:1fr; } }
+
+/* ---------- scene illustration ---------- */
+
+.scene{
+  background:linear-gradient(180deg, var(--tile) 0%, #E3EEE9 100%);
+  border-radius:var(--r-xl);
+  border:1px solid var(--line);
+  padding:clamp(1.5rem,4vw,2.5rem);
+  position:relative; overflow:hidden;
+}
+.scene svg{ width:100%; height:auto; display:block; position:relative; z-index:2; }
+.scene::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:34%;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 20' preserveAspectRatio='none'%3E%3Cpath d='M0,10 C40,20 70,2 110,9 C150,16 190,20 230,11 C260,4 280,3 300,9 L300,20 L0,20 Z' fill='rgba(126,163,146,0.55)'/%3E%3C/svg%3E") repeat-x top / 300px 18px,
+             linear-gradient(180deg, rgba(110,143,125,.30), rgba(20,50,44,.10));
+  animation:crest 11s linear infinite;
+  z-index:1;
+}
+
+/* ---------- stillness, when asked for ---------- */
+
+@media (prefers-reduced-motion: reduce){
+  .tide{ transition:none; }
+  .bubble{ display:none; }
+  .hero::after{ animation:none; }
+  .band-paper::before,.band-tile::before,.band-ink::before{ transform:translateY(-99%); }
+  .band-paper::after,.band-tile::after,.band-ink::after,.page-head::after{ transform:none; }
+  .product-art::before{ transition:none; height:48%; }
+  .reveal{ transform:none; }
+}
+
+
+/* single-file additions */
+.view[hidden]{ display:none; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>New York City · Westchester · New Jersey · Connecticut</span>
+    <span>Free on-site water test — <a href="mailto:purgowater@outlook.com">email us</a></span>
+  </div>
+</div>
+
+<header class="site-header" data-menu="closed">
+  <div class="wrap">
+    <a class="brand" href="#home">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 2.5S6 13.2 6 20a10 10 0 0 0 20 0c0-6.8-10-17.5-10-17.5z" fill="#CFE0DA" stroke="#14322C" stroke-width="1.6"/>
+        <path d="M11 21.8v-4.4l5-3.7 5 3.7v4.4z" stroke="#14322C" stroke-width="1.6" stroke-linejoin="round"/>
+      </svg>
+      <span>
+        <span class="brand-name">Purgō</span>
+        <span class="brand-sub">Water</span>
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Main">
+      <div class="nav-drop" data-open="false">
+        <button type="button" aria-expanded="false">Systems <span aria-hidden="true">▾</span></button>
+        <menu>
+          <li><a href="#whole-home">Whole Home Systems</a></li>
+          <li><a href="#drinking-water">Drinking Water Systems</a></li>
+          <li><a href="#add-ons">Add-ons & Protection</a></li>
+        </menu>
+      </div>
+      <a href="#installation">Installation</a>
+      <a href="#service-areas">Service Areas</a>
+      <a href="#our-story">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#contact">Email us</a>
+      <button class="hamburger" aria-label="Menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="view" id="page-home" data-view="home" data-label="Home" hidden>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">purgō &nbsp;·&nbsp; Latin &nbsp;·&nbsp; to cleanse</p>
+      <h1>Water you stop <em>thinking about</em>.</h1>
+      <p class="lede">We build and fit home water treatment across New York City, Westchester, New Jersey and Connecticut. It starts with a free test of your actual tap — not an assumption about your zip code.</p>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#contact">Email us</a>
+        <a class="btn btn-ghost" href="#whole-home">See the systems</a>
+      </div>
+
+      <div class="trust-row">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Licensed &amp; insured in NY, NJ, CT</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Our own crews, never subcontracted</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Warranty on every system</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>NSF-certified media</span>
+      </div>
+    </div>
+
+    <!-- ---------- signature element ---------- -->
+    <div class="report">
+      <div class="report-top">
+        <strong>What's in your tap?</strong>
+        <span>REGIONAL PROFILE</span>
+      </div>
+      <div class="report-body">
+        <span class="report-label">Pick where you live</span>
+        <div class="picker" data-picker>
+          <button type="button" data-region="nyc" aria-pressed="true">New York City</button>
+          <button type="button" data-region="westchester" aria-pressed="false">Westchester</button>
+          <button type="button" data-region="nj" aria-pressed="false">New Jersey</button>
+          <button type="button" data-region="ct" aria-pressed="false">Connecticut</button>
+        </div>
+        <div class="readout" data-readout></div>
+      </div>
+      <p class="report-foot">These are the patterns we see region to region. Your house is not a region — every job starts with a test at your own tap, and the results decide the build.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THREE LAYERS ================= -->
+<section class="band-paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">How a home gets treated</p>
+      <h2>Three layers, fitted to what your water actually needs.</h2>
+      <p class="lede">Most homes need one or two of these, not all three. We would rather sell you less equipment that solves the problem than more that sits in the basement.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-5h4v5"/></svg>
+        </div>
+        <h3>Whole Home Systems</h3>
+        <p>Treated at the point where water enters the building, so every tap, shower and appliance downstream gets the same water.</p>
+        <ul>
+          <li>Softeners and salt-free conditioners</li>
+          <li>Carbon filtration for chlorine and taste</li>
+          <li>Iron, manganese and sulfur removal</li>
+          <li>Dual-tank builds for well water</li>
+        </ul>
+        <a class="card-link" href="#whole-home">Browse whole home →</a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8l-1 6a4 4 0 0 1-1 2.6L13 13v7"/><path d="M9 20h6"/><path d="M8 8h8"/></svg>
+        </div>
+        <h3>Drinking Water Systems</h3>
+        <p>A dedicated line under the kitchen sink for the water you cook with, drink and fill the kettle from.</p>
+        <ul>
+          <li>Tankless reverse osmosis, up to 800 GPD</li>
+          <li>Classic five-stage tank RO</li>
+          <li>Optional remineralisation</li>
+          <li>Faucets in five finishes</li>
+        </ul>
+        <a class="card-link" href="#drinking-water">Browse drinking water →</a>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+        </div>
+        <h3>Add-ons &amp; Protection</h3>
+        <p>The parts that guard the rest — sediment pre-filters, UV, leak shutoff, and weather protection for outdoor equipment.</p>
+        <ul>
+          <li>UV disinfection for well homes</li>
+          <li>Big-blue sediment pre-filtration</li>
+          <li>Automatic leak detection and shutoff</li>
+          <li>Insulated enclosures for outdoor sets</li>
+        </ul>
+        <a class="card-link" href="#add-ons">Browse add-ons →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW IT FITS TOGETHER ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The short version</p>
+      <h2>Where the equipment actually goes.</h2>
+      <p class="lede">Two points of treatment. One where water enters the house and everything downstream benefits, one at the kitchen sink for what you drink.</p>
+    </div>
+
+    <div class="scene reveal">
+      <svg viewBox="0 0 900 450" role="img" aria-label="Cutaway of a house showing whole-home treatment where the water enters the basement and a reverse osmosis unit under the kitchen sink">
+        <defs>
+          <marker id="flow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+            <path d="M0,1 L8,5 L0,9 z" fill="#2F5A4E"/>
+          </marker>
+        </defs>
+
+        <g fill="none" stroke="#14322C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <!-- house shell -->
+          <path d="M150 150 L400 52 L650 150"/>
+          <path d="M188 136 V392 H612 V136"/>
+          <path d="M188 268 H612"/>
+          <!-- ground -->
+          <path d="M40 392 H860" stroke-width="3"/>
+        </g>
+
+        <!-- upper floor: kitchen -->
+        <g fill="none" stroke="#14322C" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M300 236 H470 V244 H300 Z" fill="#FBF8F2"/>
+          <path d="M336 244 V212 h56 v32"/>
+          <path d="M364 212 V186 a22 22 0 0 1 22-22 h26"/>
+          <path d="M412 164 v22"/>
+          <!-- glass -->
+          <path d="M436 214 h30 l-4 26 h-22 z" fill="#FBF8F2"/>
+        </g>
+        <!-- pour -->
+        <path d="M412 190 q3 14 0 24" stroke="#6E8F7D" stroke-width="4" stroke-linecap="round" fill="none" opacity=".9"/>
+        <path d="M448 220 h8 l-1 16 h-6 z" fill="#6E8F7D" opacity=".55"/>
+        <!-- RO unit under the counter -->
+        <g fill="none" stroke="#14322C" stroke-width="2.4" stroke-linejoin="round">
+          <rect x="404" y="248" width="62" height="16" rx="6" fill="#CFE0DA"/>
+          <path d="M418 248 v16 M436 248 v16 M452 248 v16"/>
+        </g>
+
+        <!-- basement: whole-home tanks -->
+        <g fill="none" stroke="#14322C" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="232" y="296" width="48" height="86" rx="22" fill="#CFE0DA"/>
+          <path d="M244 296 v-10 a12 12 0 0 1 24 0 v10"/>
+          <rect x="300" y="296" width="48" height="86" rx="22" fill="#CFE0DA"/>
+          <path d="M312 296 v-10 a12 12 0 0 1 24 0 v10"/>
+          <rect x="368" y="330" width="40" height="52" rx="10" fill="#FBF8F2"/>
+        </g>
+        <path d="M232 340 h48 M300 340 h48" stroke="#6E8F7D" stroke-width="2" stroke-dasharray="3 6" fill="none"/>
+
+        <!-- the water's route -->
+        <g fill="none" stroke="#2F5A4E" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M52 424 H206 V318 h26" marker-end="url(#flow)"/>
+          <path d="M280 318 h20" />
+          <path d="M348 318 h20 v-6"/>
+          <path d="M388 330 v-24 h44 v-42" marker-end="url(#flow)"/>
+        </g>
+
+        <!-- labels -->
+        <g font-family="DM Mono, monospace" font-size="12.5" fill="#2F5A4E" letter-spacing=".06em">
+          <circle cx="120" cy="424" r="4" fill="#C1862A"/>
+          <text x="134" y="428">Street main comes in here</text>
+
+          <circle cx="212" cy="286" r="4" fill="#C1862A"/>
+          <text x="60" y="272">Whole-home treatment</text>
+          <path d="M212 286 V276 H196" stroke="#C1862A" stroke-width="1.4" fill="none"/>
+
+          <circle cx="686" cy="256" r="4" fill="#C1862A"/>
+          <text x="700" y="260">Reverse osmosis</text>
+          <text x="700" y="276" fill="#647570">at the kitchen tap</text>
+          <path d="M686 256 H492" stroke="#C1862A" stroke-width="1.4" stroke-dasharray="4 5" fill="none"/>
+
+          <circle cx="686" cy="344" r="4" fill="#C1862A"/>
+          <text x="700" y="348">Every other tap</text>
+          <text x="700" y="364" fill="#647570">already treated</text>
+          <path d="M686 344 H426" stroke="#C1862A" stroke-width="1.4" stroke-dasharray="4 5" fill="none"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OUR PEOPLE ================= -->
+<section>
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">The part most companies outsource</p>
+      <h2>The person who installs it works here.</h2>
+      <p>A water system is only as good as the plumbing it is tied into. That is why we do not hand your job to whichever contractor is free that week. Purgō technicians are hired by us, trained in our own shop, licensed in the state they are working in, and they are the same people who come back if something needs attention in year six.</p>
+      <p>It means we can stand behind the whole job — the equipment, the tie-in, the drain, the bypass, and the way the basement looks when we leave.</p>
+
+      <ul class="spec-list">
+        <li>Licensed and insured for plumbing work in New York, New Jersey and Connecticut</li>
+        <li>Trained in-house on every system we sell, before they ever touch a customer's home</li>
+        <li>Background-checked, uniformed, and they take their boots off at the door</li>
+        <li>Same crew handles warranty visits and media changes years later</li>
+      </ul>
+
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#installation">How an install works</a>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <div class="feature">
+        <p class="eyebrow">Install day, plainly</p>
+        <div class="steps">
+          <div class="step">
+            <div>
+              <h3>We test your water</h3>
+              <p>A technician comes out, tests at the tap, looks at your main, your heater and your available space. No charge, no obligation.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h3>You get a written build</h3>
+              <p>One page: what we found, what we recommend, what it costs installed, and what it costs to run each year.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h3>We pull permits where required</h3>
+              <p>Municipal requirements differ across four states. Handling that is our job, not yours.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h3>Install, usually in a day</h3>
+              <p>Drop cloths down, water off, tie-in made, drain routed, valve programmed, everything pressure-tested before we leave.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div>
+              <h3>We show you how it runs</h3>
+              <p>Fifteen minutes at the end so you know the bypass, the salt fill and the filter schedule. Then we check in at the six-month mark.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURED PACKAGE ================= -->
+<section class="band-tile">
+  <div class="wrap">
+    <div class="feature split reveal">
+      <div>
+        <p class="eyebrow">Our most-installed build</p>
+        <h2>The Whole House Package</h2>
+        <p class="lede">The combination that solves the most for the most homes: softening, carbon filtration and sediment protection on the main, with reverse osmosis at the kitchen sink.</p>
+
+        <ul class="spec-list">
+          <li>High-capacity NSF-certified softening resin, sourced in the USA</li>
+          <li>Granular activated coconut shell carbon for chlorine, taste and odor</li>
+          <li>NSF-certified polishing gravel underbed</li>
+          <li>5-micron big-blue sediment pre-filter</li>
+          <li>Tankless reverse osmosis at the kitchen tap, faucet finish your choice</li>
+          <li>Installed by our own licensed crew, permits included</li>
+        </ul>
+
+        <div class="btn-row">
+          <a class="btn btn-primary" href="#contact">Get it priced for your house</a>
+          <a class="btn btn-ghost" href="mailto:purgowater@outlook.com">Email us</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="product-art" style="aspect-ratio:1/1;">
+          <svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="26" y="52" width="52" height="112" rx="24"/>
+            <path d="M40 52V40a12 12 0 0 1 12-12h0a12 12 0 0 1 12 12v12"/>
+            <path d="M26 104h52M26 128h52"/>
+            <rect x="104" y="52" width="52" height="112" rx="24"/>
+            <path d="M118 52V40a12 12 0 0 1 12-12h0a12 12 0 0 1 12 12v12"/>
+            <path d="M104 104h52M104 128h52"/>
+            <path d="M78 78h26" stroke-dasharray="5 6"/>
+            <path d="M156 78h18v86" stroke-dasharray="5 6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Why homeowners pick us</p>
+      <h2>Nothing clever. Just done properly.</h2>
+    </div>
+
+    <div class="grid-4">
+      <div class="badge reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.8 8 10 4.6-1.2 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg>
+        <h4>Certified media</h4>
+        <p>NSF-certified resin, carbon and gravel. Pressure-tested before it leaves the shop.</p>
+      </div>
+      <div class="badge reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m17 11 2 2 4-4"/></svg>
+        <h4>In-house technicians</h4>
+        <p>We employ and train our own installers. No rotating cast of subcontractors.</p>
+      </div>
+      <div class="badge reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h4>Warranty that means it</h4>
+        <p>Equipment and labour both covered, serviced by the same team that fitted it.</p>
+      </div>
+      <div class="badge reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h4>Priced once</h4>
+        <p>Installed price on the quote, including permits and tie-in. No surprises on the day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AREAS ================= -->
+<section class="band-paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Where we work</p>
+      <h2>Four locations of very different water.</h2>
+      <p class="lede">A brownstone in Brooklyn and a farmhouse in Litchfield County have almost nothing in common below the floorboards. We build for both.</p>
+    </div>
+
+    <div class="grid-4">
+      <div class="area-card reveal">
+        <h3>New York City</h3>
+        <p class="towns">Manhattan · Brooklyn · Queens · The Bronx · Staten Island</p>
+        <p class="water-note">Soft reservoir water, chlorinated. Issues come from old mains, risers and rooftop tanks.</p>
+      </div>
+      <div class="area-card reveal">
+        <h3>Westchester</h3>
+        <p class="towns">Yonkers · New Rochelle · White Plains · Scarsdale · Rye · Bedford · Katonah · Somers</p>
+        <p class="water-note">Aqueduct water in the south, private bedrock wells further north. Test first, always.</p>
+      </div>
+      <div class="area-card reveal">
+        <h3>New Jersey</h3>
+        <p class="towns">Bergen · Hudson · Essex · Passaic · Union · Morris · Middlesex · Monmouth</p>
+        <p class="water-note">Moderate to hard, chlorine or chloramine. We read your utility's report before quoting.</p>
+      </div>
+      <div class="area-card reveal">
+        <h3>Connecticut</h3>
+        <p class="towns">Fairfield · Greenwich · Stamford · Norwalk · Danbury · New Haven · Litchfield</p>
+        <p class="water-note">Heavy private-well territory. Hardness, iron, manganese and sulfur are the usual suspects.</p>
+      </div>
+    </div>
+
+    <div class="btn-row reveal">
+      <a class="btn btn-ghost" href="#service-areas">See full coverage</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Before you call</p>
+      <h2>The questions we get asked most.</h2>
+    </div>
+
+    <div class="faq reveal">
+      <details open>
+        <summary>What is the difference between a filter and a softener?</summary>
+        <p>A filter removes things from the water — chlorine, sediment, taste, odor, certain contaminants. A softener removes hardness, meaning the dissolved calcium and magnesium that leave scale on your kettle, cloud your shower door and shorten the life of a water heater. They solve different problems, which is why many homes end up with both and some need only one.</p>
+      </details>
+      <details>
+        <summary>Does anyone in New York City actually need a softener?</summary>
+        <p>Usually not. City water arrives genuinely soft, so softening rarely earns its keep in the five boroughs. What city homes do benefit from is carbon and sediment filtration for chlorine and for whatever the building's own pipes contribute, plus reverse osmosis at the kitchen sink in older buildings. We will tell you if you don't need something.</p>
+      </details>
+      <details>
+        <summary>How does reverse osmosis work?</summary>
+        <p>Water is pushed under pressure through a membrane with pores fine enough that dissolved contaminants cannot follow it through. What comes out the other side is stripped of the great majority of what was dissolved in it. It is the most thorough treatment available at a residential scale, which is why we use it for drinking and cooking water rather than for the whole house.</p>
+      </details>
+      <details>
+        <summary>Will it hurt my water pressure?</summary>
+        <p>Sized correctly, no — you should not notice a difference at the shower. Sizing is the whole game here: a system matched to a two-bathroom house will choke a five-bathroom one. That is part of what the on-site visit is for, since we need to see your service line and your fixture count, not just your square footage.</p>
+      </details>
+      <details>
+        <summary>How often do filters need changing?</summary>
+        <p>It depends on the stage and on how hard your water works it. Sediment pre-filters typically run six to twelve months, RO membranes considerably longer, and whole-home carbon beds are measured in years. We leave you a schedule for your specific build and we send a reminder when yours is due.</p>
+      </details>
+      <details>
+        <summary>Can you install in an apartment or a co-op?</summary>
+        <p>Often yes for under-sink drinking water systems, which is the most common request in the city. Whole-home equipment in a multi-family building depends on where your service enters and what your building allows, so that conversation usually involves your managing agent. We are happy to talk to them.</p>
+      </details>
+      <details>
+        <summary>What does the free water test involve?</summary>
+        <p>A technician comes to the house, draws a sample at the tap, and runs the standard panel on the spot — hardness, chlorine, TDS, pH, iron. For private wells we also pull a sample for a certified lab, since bacteria, nitrate and arsenic need proper analysis. You get the numbers whether or not you buy anything from us.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <p class="eyebrow" style="justify-content:center;">No charge, no obligation</p>
+      <h2>Let's find out what's actually in your water.</h2>
+      <p class="lede">Book a visit and we'll test at your tap, walk your basement, and tell you plainly what — if anything — is worth doing.</p>
+      <div class="btn-row">
+        <a class="btn btn-brass" href="#contact">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="view" id="page-whole-home" data-view="whole-home" data-label="Whole Home Systems" hidden>
+<section class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="#home">Home</a> &nbsp;/&nbsp; Whole Home Systems</p>
+    <h1>Whole Home Systems</h1>
+    <p class="lede">Treatment fitted where water enters the building, so every tap, shower, dishwasher and boiler downstream is working with the same water. Which of these you need depends entirely on what your test comes back saying.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Point-of-entry treatment</p>
+      <h2>Seven builds. Most homes need one.</h2>
+      <p class="lede">We would rather explain why you do not need something than sell it to you. Every one of these starts with a test, and plenty of visits end with us recommending the smallest option on the page.</p>
+    </div>
+    
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Softening + carbon</p>
+          <h3>Softener with Chlorine Filtration</h3>
+          <p>The workhorse of the range, and the right answer for most hard-water homes on a municipal supply. It handles the two problems that usually arrive together: dissolved calcium and magnesium that leave scale everywhere, and the chlorine that makes water taste and smell like a swimming pool.</p><p>Downstream, soap starts lathering properly, the shower door stops fogging with mineral film, and your water heater stops working through a layer of scale to do its job.</p>
+          <ul class="spec-list"><li>USA-sourced high-capacity softening resin</li><li>Granular activated coconut shell carbon</li><li>NSF-certified polishing gravel underbed</li><li>Programmable metered valve &mdash; regenerates on usage, not on a timer</li><li>Pairs directly with any of our drinking water systems</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="44" y="56" width="72" height="132" rx="34"/><path d="M62 56V42a18 18 0 0 1 36 0v14"/><rect x="56" y="16" width="48" height="26" rx="8"/><path d="M44 116h72M44 146h72" stroke-dasharray="4 7"/><path d="M116 84h26"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Filtration only</p>
+          <h3>Whole Home Carbon Filter</h3>
+          <p>For homes that do not have a hardness problem &mdash; most of New York City, for instance &mdash; but do want the chlorine, taste, odor and sediment dealt with before water reaches a single fixture.</p><p>No salt, no drain line, no regeneration cycle. Once it is in, it does its work quietly and you top up nothing.</p>
+          <ul class="spec-list"><li>Granular activated coconut shell carbon bed</li><li>NSF-certified polishing gravel</li><li>No salt and no drain connection required</li><li>Maintenance-free between media changes</li><li>Well suited to city apartments and brownstones</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="46" y="48" width="68" height="140" rx="32"/><path d="M62 48V36a18 18 0 0 1 36 0v12"/><path d="M62 96c8-8 16 8 24 0s16 8 24 0M62 126c8-8 16 8 24 0s16 8 24 0" /></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Hardness only</p>
+          <h3>Whole Home Water Softener</h3>
+          <p>Straight softening for homes where hardness is the whole story. Calcium and magnesium are exchanged out before the water reaches your plumbing, which is the difference between a heater that lasts its rated life and one that dies early packed with scale.</p><p>You will notice it first in the laundry and the bathroom &mdash; towels come out softer, and the ring around the tub stops coming back.</p>
+          <ul class="spec-list"><li>WQA Gold Seal award-winning softening resin</li><li>NSF-certified polishing gravel</li><li>Ceramic valve technology for a long service life</li><li>Self-cleaning backwash cycle</li><li>Sized to your fixture count, not your square footage</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="44" y="56" width="72" height="132" rx="34"/><path d="M62 56V42a18 18 0 0 1 36 0v14"/><rect x="56" y="16" width="48" height="26" rx="8"/><path d="M44 116h72M44 146h72" stroke-dasharray="4 7"/><path d="M116 84h26"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Salt-free</p>
+          <h3>Salt-Free Scale Conditioner</h3>
+          <p>An alternative for households that want scale under control without adding sodium to the water, without a drain line, and without carrying salt down the basement stairs.</p><p>Rather than removing minerals, it changes their structure so they are far less inclined to stick to pipe walls, heating elements and fixtures. The minerals stay in your water; the scale largely does not.</p>
+          <ul class="spec-list"><li>No salt, no drain, no wastewater</li><li>No regeneration cycle to run</li><li>Mineral content stays in the water</li><li>Effectively maintenance-free</li><li>Add a carbon tank alongside for chlorine removal</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="46" y="48" width="68" height="140" rx="32"/><path d="M62 48V36a18 18 0 0 1 36 0v12"/><path d="M62 96c8-8 16 8 24 0s16 8 24 0M62 126c8-8 16 8 24 0s16 8 24 0" /></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Well water</p>
+          <h3>Dual-Tank Well System</h3>
+          <p>Private wells across Connecticut and northern Westchester rarely present one problem at a time. Sediment, iron, manganese and sulfur odor tend to arrive together, and a single tank cannot properly address all of them.</p><p>This build treats in stages, so each tank does one job well instead of one tank doing several jobs badly. It is what we fit on the majority of well homes.</p>
+          <ul class="spec-list"><li>Staged treatment across two tanks</li><li>WQA Gold Seal softening resin</li><li>Katalox Light media for iron and manganese</li><li>Granular activated coconut shell carbon</li><li>High-efficiency smart valves on both units</li><li>Designed specifically for private well supply</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="58" width="60" height="126" rx="28"/><path d="M36 58V46a14 14 0 0 1 28 0v12"/><rect x="120" y="58" width="60" height="126" rx="28"/><path d="M136 58V46a14 14 0 0 1 28 0v12"/><path d="M80 92h40" stroke-dasharray="4 7"/><path d="M20 124h60M120 124h60" stroke-dasharray="4 7"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">City water</p>
+          <h3>Dual-Tank City System</h3>
+          <p>The same staged approach applied to a municipal supply, for larger homes and for districts where chlorine or chloramine levels make a single tank work too hard.</p><p>Both tanks backflush, which keeps the media beds from channelling and keeps the system performing the way it did in month one.</p>
+          <ul class="spec-list"><li>Staged filtration and softening</li><li>WQA Gold Seal softening resin</li><li>Granular activated coconut shell carbon</li><li>Both tanks backflush to extend service life</li><li>Ceramic valve technology</li><li>Suited to high-demand and large households</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="20" y="58" width="60" height="126" rx="28"/><path d="M36 58V46a14 14 0 0 1 28 0v12"/><rect x="120" y="58" width="60" height="126" rx="28"/><path d="M136 58V46a14 14 0 0 1 28 0v12"/><path d="M80 92h40" stroke-dasharray="4 7"/><path d="M20 124h60M120 124h60" stroke-dasharray="4 7"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Iron &amp; sulfur</p>
+          <h3>Iron and Sulfur Removal System</h3>
+          <p>For the two problems that make well water genuinely unpleasant: orange staining on fixtures and laundry, and the rotten-egg smell of hydrogen sulfide.</p><p>Both are handled by oxidising the dissolved contaminants into particles large enough to be filtered out. What reaches your taps afterwards is clear and does not announce itself.</p>
+          <ul class="spec-list"><li>Chemical injection panel</li><li>Catalytic coconut shell carbon</li><li>Peroxide holding tank</li><li>Brine tank for the softening stage</li><li>Removes staining and sulfur odor at source</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="30" y="56" width="58" height="128" rx="28"/><rect x="112" y="86" width="58" height="98" rx="20"/><path d="M46 56V44a13 13 0 0 1 26 0v12"/><path d="M88 96h24" stroke-dasharray="4 7"/><path d="M141 86V60M128 60h26"/></svg></div>
+      </article>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Not sure which of these is yours?</h2>
+      <p class="lede">That is exactly what the free visit is for. We test, we look at your setup, and we tell you which one fits.</p>
+      <div class="btn-row">
+        <a class="btn btn-brass" href="#contact">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="view" id="page-drinking-water" data-view="drinking-water" data-label="Drinking Water Systems" hidden>
+<section class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="#home">Home</a> &nbsp;/&nbsp; Drinking Water Systems</p>
+    <h1>Drinking Water Systems</h1>
+    <p class="lede">Whole-home treatment handles the water you wash in. This handles the water you actually drink &mdash; a dedicated, thoroughly filtered line at the kitchen sink.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Point-of-use treatment</p>
+      <h2>The tap you use twenty times a day.</h2>
+      <p class="lede">Reverse osmosis is the most thorough treatment available at residential scale. It is also slow and produces some waste water, which is why it belongs at one sink rather than across a whole house.</p>
+    </div>
+    
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Tankless RO</p>
+          <h3>AlkaPro 800</h3>
+          <p>Our most-installed drinking water system. Tankless reverse osmosis running at up to 800 gallons per day, which in practice means it keeps up with a full pitcher and a pot of pasta without the pause a tank system gives you.</p><p>Because there is no storage tank, it takes back a good deal of the cupboard under your sink, and there is no standing water sitting in a bladder between uses.</p>
+          <ul class="spec-list"><li>800 GPD tankless reverse osmosis</li><li>No storage tank &mdash; cupboard space back</li><li>Quick-connect fittings for tool-free filter changes</li><li>Digital monitoring of filter life and water quality</li><li>Faucet finish matched to your kitchen hardware</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="46" y="42" width="108" height="116" rx="16"/><rect x="66" y="62" width="22" height="76" rx="11"/><rect x="96" y="62" width="22" height="76" rx="11"/><rect x="126" y="62" width="12" height="76" rx="6"/><path d="M100 158v22M78 180h44"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Classic RO</p>
+          <h3>Five-Stage Reverse Osmosis</h3>
+          <p>The proven tank-style design, and still the right answer when budget matters more than cupboard space. Five stages of filtration feed a storage tank, so purified water is waiting whenever you open the tap.</p><p>Simple, well understood, and easy to service &mdash; there is a reason this configuration has been in kitchens for decades.</p>
+          <ul class="spec-list"><li>Five stages of sediment, carbon and membrane filtration</li><li>Storage tank for instant on-demand draw</li><li>Dedicated drinking water faucet</li><li>Straightforward, inexpensive filter changes</li><li>A dependable, lower-cost route to RO water</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="46" y="42" width="108" height="116" rx="16"/><rect x="66" y="62" width="22" height="76" rx="11"/><rect x="96" y="62" width="22" height="76" rx="11"/><rect x="126" y="62" width="12" height="76" rx="6"/><path d="M100 158v22M78 180h44"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Optional stage</p>
+          <h3>Remineralisation Cartridge</h3>
+          <p>Reverse osmosis is thorough by design, which means it takes out beneficial minerals along with everything else. Some people notice; the water can taste a little flat and slightly acidic.</p><p>An inline remineralisation stage puts calcium and magnesium back after filtration, which lifts the pH gently and restores the rounder taste most people prefer. It is a small addition and easy to retrofit later if you decide you want it.</p>
+          <ul class="spec-list"><li>Adds calcium and magnesium back after the membrane</li><li>Raises pH toward neutral</li><li>Rounder taste, better for coffee and tea</li><li>Fits either RO system</li><li>Can be added at any point after install</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M40 40h80v14l-14 12v88a12 12 0 0 1-12 12H66a12 12 0 0 1-12-12V66L40 54z"/><path d="M54 96h52M54 122h52" stroke-dasharray="4 7"/><path d="M14 47h26M120 47h26"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Finishes</p>
+          <h3>Faucet Options</h3>
+          <p>The faucet is the only part of the system you will ever look at, so it should match the rest of the kitchen rather than announce that something technical happened under the counter.</p><p>Five finishes, all lead-free and all included in the installed price &mdash; brushed nickel, polished chrome, brushed gold, matte black and oil-rubbed bronze.</p>
+          <ul class="spec-list"><li>Brushed nickel</li><li>Polished chrome</li><li>Brushed gold</li><li>Matte black</li><li>Oil-rubbed bronze</li><li>Air-gap and standard styles available</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M40 172h80"/><path d="M80 172v-52"/><path d="M80 120V70a30 30 0 0 1 30-30h6"/><path d="M116 40v26"/><path d="M64 88h32" /><circle cx="116" cy="88" r="5"/><circle cx="116" cy="106" r="5"/></svg></div>
+      </article>
+  </div>
+</section>
+
+<section class="band-paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Worth knowing</p>
+      <h2>Reverse osmosis, without the sales pitch.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal"><h3>What it removes</h3><p>Dissolved solids that other filters pass straight through &mdash; lead, nitrate, fluoride, chlorine byproducts, PFAS compounds and a wide range of other contaminants. It is the reason RO is the standard for drinking water rather than a carbon block alone.</p></div>
+      <div class="card reveal"><h3>What it costs to run</h3><p>Filters once or twice a year, a membrane far less often, and a modest amount of waste water per gallon produced. We put the annual running cost in writing on your quote so it is never a surprise.</p></div>
+      <div class="card reveal"><h3>What it will not do</h3><p>An RO system is not a disinfection unit. It should not be used on water that is microbiologically unsafe or of unknown source without proper disinfection ahead of it &mdash; which, on a private well, means UV.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Want better water at the kitchen tap?</h2>
+      <p class="lede">Most drinking water systems go in inside a couple of hours. We can usually test and quote on the same visit.</p>
+      <div class="btn-row">
+        <a class="btn btn-brass" href="#contact">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="view" id="page-add-ons" data-view="add-ons" data-label="Add-ons & Protection" hidden>
+<section class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="#home">Home</a> &nbsp;/&nbsp; Add-ons &amp; Protection</p>
+    <h1>Add-ons &amp; Protection</h1>
+    <p class="lede">The pieces that protect everything else. None of these are required on every job &mdash; we fit them when the water, the house or the winter calls for it.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Supporting equipment</p>
+      <h2>Small parts, large consequences.</h2>
+      <p class="lede">A sediment filter costs very little and saves an expensive tank. A leak valve costs a fraction of a flooded basement. These are the additions we actually recommend, and we will say when one is unnecessary.</p>
+    </div>
+    
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Disinfection</p>
+          <h3>Whole Home UV</h3>
+          <p>Filtration removes things. UV neutralises living things &mdash; bacteria and other microorganisms &mdash; using light alone, with nothing added to the water.</p><p>On a private well there is no utility chlorinating your supply, so this is the layer that provides that protection. We fit it as standard on well builds and it is worth considering anywhere a supply is untreated.</p>
+          <ul class="spec-list"><li>Chemical-free disinfection</li><li>Neutralises 99.9% of bacteria</li><li>Stainless steel chamber</li><li>Spare lamp supplied with every unit</li><li>Sized for whole-house flow rates</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 200 160" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><rect x="24" y="58" width="152" height="44" rx="22"/><path d="M24 80H6M176 80h18"/><path d="M60 80h80" stroke-dasharray="3 8"/><path d="M100 58V32M76 62l-10-20M124 62l10-20"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">First stage</p>
+          <h3>Pre-Sediment Filter</h3>
+          <p>The cheapest piece of equipment in the house and one of the most useful. It catches sand, grit, rust and scale flakes before they reach anything expensive.</p><p>In New York City that matters more than people expect &mdash; a century of cast iron mains sheds a surprising amount of material, and it is the reason a filter cartridge pulled from a Brooklyn basement often comes out orange.</p>
+          <ul class="spec-list"><li>5 micron filtration</li><li>4&Prime; &times; 20&Prime; big blue housing</li><li>Protects downstream filtration and plumbing</li><li>Compatible with city and well supply</li><li>Extends the service life of everything after it</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 160 200" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M40 40h80v14l-14 12v88a12 12 0 0 1-12 12H66a12 12 0 0 1-12-12V66L40 54z"/><path d="M54 96h52M54 122h52" stroke-dasharray="4 7"/><path d="M14 47h26M120 47h26"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Protection</p>
+          <h3>Leak Detection &amp; Auto Shutoff</h3>
+          <p>A valve on the main that watches flow and closes it when the pattern looks wrong &mdash; a burst supply line, a failed heater, a pipe that let go while you were away for the weekend.</p><p>Water damage is the most expensive thing that can go wrong in a basement. Given how far that repair bill runs, this is the least glamorous and most sensible add-on we sell.</p>
+          <ul class="spec-list"><li>Monitors flow and shuts the main automatically</li><li>Alerts to your phone</li><li>Detects slow leaks as well as burst lines</li><li>Manual override on the valve</li><li>Often reduces homeowner insurance premiums</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 200 160" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 80h44M142 80h44"/><rect x="58" y="50" width="84" height="60" rx="14"/><circle cx="100" cy="80" r="16"/><path d="M100 66v14l9 6"/></svg></div>
+      </article>
+      <article class="product reveal">
+        <div>
+          <p class="kicker">Enclosures</p>
+          <h3>Outdoor Shed &amp; Rock Enclosures</h3>
+          <p>Not every house has basement room, and in this part of the country equipment left outside has to survive real winters.</p><p>An insulated shed or a hollow faux rock keeps the tanks out of the weather and out of sight, while leaving proper access for servicing. The rock disappears into planting; the shed suits a side yard or a utility run.</p>
+          <ul class="spec-list"><li>Insulated against freezing</li><li>Discreet in a yard or garden bed</li><li>Full service access retained</li><li>Locking options available</li><li>Fitted and sited by our own crew</li></ul>
+          <a class="btn btn-ghost" href="#contact">Ask about this system</a>
+        </div>
+        <div class="product-art"><svg viewBox="0 0 200 160" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 74 100 26l78 48"/><path d="M38 66v72h124V66"/><rect x="80" y="94" width="40" height="44" rx="6"/><path d="M100 94v44"/></svg></div>
+      </article>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Adding to a system you already have?</h2>
+      <p class="lede">We service and extend existing setups too, including equipment we did not originally install.</p>
+      <div class="btn-row">
+        <a class="btn btn-brass" href="#contact">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="view" id="page-installation" data-view="installation" data-label="Installation" hidden>
+<section class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="#home">Home</a> &nbsp;/&nbsp; Installation</p>
+    <h1>Installed by our own people.</h1>
+    <p class="lede">Trained in our shop, licensed in your state, on our payroll &mdash; and the same crew that comes back years later. Here is exactly what happens between your first call and our six-month check-in.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">The difference we care about most</p>
+      <h2>We employ our installers. All of them.</h2>
+      <p>Plenty of water treatment companies are sales operations with a call list. They quote the job, take the deposit, and hand the actual work to whichever plumbing contractor is available that week &mdash; someone who has never seen the equipment before and will never see your house again.</p>
+      <p>We do it the other way round. Every Purg&#333; technician is on our payroll, trained on our bench, licensed in the state they are working in, and accountable for the job long after the van pulls away.</p>
+      <p>It costs us more. It is also the only way to promise that the tie-in, the drain, the bypass and the programming are done the same way every time.</p>
+    </div>
+    <div class="reveal">
+      <div class="feature">
+        <h3>What our training covers</h3>
+        <ul class="spec-list">
+          <li>Every system we sell, assembled and stripped down on the bench before it is fitted in a customer's home</li>
+          <li>State and municipal plumbing code across New York, New Jersey and Connecticut</li>
+          <li>Backflow prevention, air gaps and drain requirements</li>
+          <li>Valve programming and metered regeneration setup</li>
+          <li>Water chemistry &mdash; reading a lab panel and knowing what it calls for</li>
+          <li>Diagnosing and servicing equipment we did not install</li>
+        </ul>
+        <p style="font-size:.93rem;color:var(--muted);">New technicians ride along on installs before they lead one. Nobody works alone in a customer's home until they have earned it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Start to finish</p>
+      <h2>What actually happens, in order.</h2>
+      <p class="lede">From the first phone call to the check-in six months later. Most jobs run about a week end to end, with one day of that spent in your house.</p>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step"><div>
+        <h3>The call</h3>
+        <p>Ten minutes on the phone. Where you are, what you have noticed &mdash; the smell, the staining, the scale, the taste &mdash; and whether you are on a municipal supply or a private well. We book the visit from there.</p>
+      </div></div>
+      <div class="step"><div>
+        <h3>The test, at your house</h3>
+        <p>A technician tests at your tap for hardness, chlorine, total dissolved solids, pH and iron. On a well we also draw a sample for a certified lab, because bacteria, nitrate and arsenic need real analysis rather than a field kit. You get the numbers either way, and there is no charge and no obligation.</p>
+      </div></div>
+      <div class="step"><div>
+        <h3>The walkthrough</h3>
+        <p>We look at where your water comes in, what your heater is doing, where a drain could be routed, and how much room there actually is. This is the step that decides whether a system fits and how it gets tied in &mdash; and it is the step that cannot be done over the phone.</p>
+      </div></div>
+      <div class="step"><div>
+        <h3>The written build</h3>
+        <p>One page. What we found, what we recommend and why, the installed price including permits, and what it costs to run each year. If we think you need less than you expected, that is what the page will say.</p>
+      </div></div>
+      <div class="step"><div>
+        <h3>Permits and scheduling</h3>
+        <p>Requirements differ across four states and hundreds of municipalities. We handle the filing where it is required and we book a date that works for you rather than a four-hour window.</p>
+      </div></div>
+      <div class="step"><div>
+        <h3>Install day</h3>
+        <p>Drop cloths down before anything else. Water off, equipment set, tie-in made, drain routed, bypass fitted so the house can run without the system if it ever needs to. Everything is pressure-tested and the valve is programmed to your household's actual usage before we pack up.</p>
+      </div></div>
+      <div class="step"><div>
+        <h3>The handover</h3>
+        <p>Fifteen minutes with you at the end: how the bypass works, how to add salt if your build uses it, when filters are due, and what the display is telling you. We leave the manuals and our direct number, and we clean up.</p>
+      </div></div>
+      <div class="step"><div>
+        <h3>Six months later</h3>
+        <p>We come back, retest your water, confirm the system is doing what we said it would, and change anything that is due. Same technician wherever we can manage it.</p>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Fair warning</p>
+      <h2>Things we tell people that other companies don't.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <h3>You may not need a softener</h3>
+        <p>If you are in the five boroughs, your water is already soft and a softener will do very little for you. We will say so on the visit rather than after the deposit clears.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Some houses need a plumber first</h3>
+        <p>If your main is failing or your shutoff will not hold, that gets fixed before treatment goes in. Occasionally that means we send you elsewhere for a week. It is still the right order to do things in.</p>
+      </div>
+      <div class="card reveal">
+        <h3>Filters are not free forever</h3>
+        <p>Every system has a running cost. Ours is on the quote in writing, so the number you agree to in month one is the number you are still living with in year four.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Ready to have someone look at it?</h2>
+      <p class="lede">The visit is free and it takes about forty-five minutes. You will have real numbers by the time we leave.</p>
+      <div class="btn-row">
+        <a class="btn btn-brass" href="#contact">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="view" id="page-service-areas" data-view="service-areas" data-label="Service Areas" hidden>
+<section class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="#home">Home</a> &nbsp;/&nbsp; Service Areas</p>
+    <h1>Where we work.</h1>
+    <p class="lede">New York City, Westchester, New Jersey and Connecticut. Below is what we typically find in each &mdash; and why we still test your own tap before quoting anything.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Coverage</p>
+      <h2>Four states, four completely different problems.</h2>
+      <p class="lede">We work across the whole New York metropolitan region. What follows is what we generally encounter in each area &mdash; useful for setting expectations, but never a substitute for testing your own supply.</p>
+    </div>
+
+    <article class="product reveal">
+      <div>
+        <p class="kicker">New York City</p>
+        <h3>All five boroughs</h3>
+        <p><strong>Where the water comes from.</strong> Unfiltered surface water from the Catskill, Delaware and Croton reservoir systems &mdash; among the better municipal supplies in the country, and genuinely soft when it leaves the reservoir.</p>
+        <p><strong>What we usually find.</strong></p>
+        <ul class="spec-list"><li>Chlorine taste and odor at the tap</li><li>Sediment and rust from mains that are often a century old</li><li>Lead risk from service lines and pre-1987 solder joints inside the building</li><li>Carryover from rooftop storage tanks in older apartment buildings</li><li>Very little hardness &mdash; softeners are rarely worth fitting here</li></ul>
+        <p><strong>How we usually build.</strong> Whole-home carbon and sediment filtration for what the building adds, plus reverse osmosis at the kitchen sink in older stock. Co-op and condo work is common for us; we are used to dealing with managing agents.</p>
+      </div>
+      <div class="product-art" style="aspect-ratio:auto;padding:1.5rem;">
+        <p class="water-note" style="font-family:var(--mono);font-size:.78rem;line-height:1.7;color:var(--ink);background:none;padding:0;">Every quote in this region still starts with a test at your own tap. Two houses on the same street can read differently, and we have stopped being surprised by it.</p>
+      </div>
+    </article>
+    <article class="product reveal">
+      <div>
+        <p class="kicker">Westchester County</p>
+        <h3>Yonkers to the Putnam line</h3>
+        <p><strong>Where the water comes from.</strong> The southern half largely drinks the same soft aqueduct water as the city. North and east of White Plains, homes increasingly draw from local reservoirs or private bedrock wells.</p>
+        <p><strong>What we usually find.</strong></p>
+        <ul class="spec-list"><li>Soft, chlorinated supply in the river towns</li><li>Genuine hardness north of I-287</li><li>Iron and manganese staining on well supply</li><li>No disinfection at all on private wells</li><li>Seasonal turbidity after heavy rain</li></ul>
+        <p><strong>How we usually build.</strong> South county tends to look like a city build. North county usually needs a full lab panel first, then a softener with iron removal and UV. We will not quote north Westchester without testing.</p>
+      </div>
+      <div class="product-art" style="aspect-ratio:auto;padding:1.5rem;">
+        <p class="water-note" style="font-family:var(--mono);font-size:.78rem;line-height:1.7;color:var(--ink);background:none;padding:0;">Every quote in this region still starts with a test at your own tap. Two houses on the same street can read differently, and we have stopped being surprised by it.</p>
+      </div>
+    </article>
+    <article class="product reveal">
+      <div>
+        <p class="kicker">New Jersey</p>
+        <h3>Bergen, Hudson, Essex, Passaic, Union, Morris, Middlesex and Monmouth</h3>
+        <p><strong>Where the water comes from.</strong> A patchwork of surface reservoirs and groundwater aquifers, with the serving utility changing from town to town &mdash; sometimes from one side of a road to the other.</p>
+        <p><strong>What we usually find.</strong></p>
+        <ul class="spec-list"><li>Moderate to hard water in most districts</li><li>Visible scale on kettles, heaters and shower doors</li><li>Chlorine or chloramine depending on the utility</li><li>PFAS compounds documented in a number of districts</li><li>Notable variation between neighbouring towns</li></ul>
+        <p><strong>How we usually build.</strong> Softening plus carbon as the base build, with reverse osmosis for drinking water. We pull your utility's current water quality report before quoting so the recommendation matches your actual district.</p>
+      </div>
+      <div class="product-art" style="aspect-ratio:auto;padding:1.5rem;">
+        <p class="water-note" style="font-family:var(--mono);font-size:.78rem;line-height:1.7;color:var(--ink);background:none;padding:0;">Every quote in this region still starts with a test at your own tap. Two houses on the same street can read differently, and we have stopped being surprised by it.</p>
+      </div>
+    </article>
+    <article class="product reveal">
+      <div>
+        <p class="kicker">Connecticut</p>
+        <h3>Fairfield, New Haven and Litchfield counties</h3>
+        <p><strong>Where the water comes from.</strong> A large share of Connecticut homes are on private bedrock wells, which means nobody is treating anything before it reaches your house.</p>
+        <p><strong>What we usually find.</strong></p>
+        <ul class="spec-list"><li>Hard water, often considerably so</li><li>Iron and manganese, with the staining that follows</li><li>Hydrogen sulfide &mdash; the rotten-egg smell</li><li>No disinfection on private supply</li><li>Wide variation well to well, even on the same road</li></ul>
+        <p><strong>How we usually build.</strong> Almost always a dual-tank build: softening plus iron and sulfur removal, with UV for bacterial protection. Always after a certified lab panel, never from a field kit alone.</p>
+      </div>
+      <div class="product-art" style="aspect-ratio:auto;padding:1.5rem;">
+        <p class="water-note" style="font-family:var(--mono);font-size:.78rem;line-height:1.7;color:var(--ink);background:none;padding:0;">Every quote in this region still starts with a test at your own tap. Two houses on the same street can read differently, and we have stopped being surprised by it.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="band-paper">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Not on the list?</p>
+      <h2>Ask anyway.</h2>
+      <p class="lede">These are the counties we cover routinely. We travel further for larger jobs and for well systems, and if we genuinely cannot help we will tell you who can.</p>
+    </div>
+    <div class="grid-4">
+      <div class="badge reveal"><h4>Long Island</h4><p>Case by case &mdash; call and we will tell you honestly whether the trip makes sense for your job.</p></div>
+      <div class="badge reveal"><h4>Rockland &amp; Orange</h4><p>Covered for whole-home and well systems.</p></div>
+      <div class="badge reveal"><h4>Putnam &amp; Dutchess</h4><p>Covered, particularly for private well builds.</p></div>
+      <div class="badge reveal"><h4>Commercial</h4><p>Restaurants, salons, laundries and multi-family buildings across all four states.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Find out what your street is actually drinking.</h2>
+      <p class="lede">Book a free on-site test and we will give you the numbers for your house, not the average for your county.</p>
+      <div class="btn-row">
+        <a class="btn btn-brass" href="#contact">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="view" id="page-our-story" data-view="our-story" data-label="Our Story" hidden>
+<section class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="#home">Home</a> &nbsp;/&nbsp; Our Story</p>
+    <h1>Built around the install, not the sale.</h1>
+    <p class="lede">We spent years in other people's basements looking at good equipment fitted badly. Purg&#333; exists because the person who sells you a system should be answerable for how it goes in.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="reveal">
+      <p class="eyebrow">purg&#333; &middot; Latin &middot; to cleanse, to make clear</p>
+      <h2>We named it after the only thing we actually do.</h2>
+      <p>Purg&#333; started the way most trades businesses do &mdash; with people who had already spent years in other homes' basements, looking at equipment that had been sold well and fitted badly.</p>
+      <p>The pattern was hard to miss. Systems oversized for the house. Softeners installed in the five boroughs, where the water was already soft. Drain lines run without an air gap. Media beds that had never been changed because nobody left the homeowner a schedule. In almost every case the equipment itself was fine. The problem was that whoever sold it was not the person who fitted it, and neither of them was ever coming back.</p>
+      <p>So we built the company around the part everyone else treats as an afterthought: the install, and the years after it.</p>
+    </div>
+    <div class="reveal">
+      <div class="feature">
+        <p class="eyebrow">What we hold to</p>
+        <h3>Four things, and we do not bend on them.</h3>
+        <ul class="spec-list">
+          <li><strong>Test before you sell.</strong> Nobody gets a recommendation from us based on a zip code. We test the tap, every time, at no charge.</li>
+          <li><strong>Our people do the work.</strong> Every technician is employed and trained by us. We do not subcontract installs.</li>
+          <li><strong>Say when the answer is nothing.</strong> If your water is fine, that is what the visit concludes, and we will still leave you the numbers.</li>
+          <li><strong>Price it once, in writing.</strong> Installed price, permits, and the annual running cost, all on the quote before you decide.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-tile">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Why this region is hard</p>
+      <h2>There is no such thing as &ldquo;local water&rdquo; around here.</h2>
+      <p class="lede">Most water treatment companies operate somewhere with one aquifer and one answer. Ours has four states, hundreds of utilities and tens of thousands of private wells inside a ninety-minute drive.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <h3>A Brooklyn brownstone</h3>
+        <p>Excellent soft reservoir water arriving through mains laid before the First World War, into a building whose own pipes may predate the 1987 solder rules. The water is not the problem. The last hundred feet is.</p>
+      </div>
+      <div class="card reveal">
+        <h3>A Bergen County split-level</h3>
+        <p>Moderately hard groundwater from a utility that serves four towns and changes character across them, with PFAS on the state's radar and scale on every kettle in the street.</p>
+      </div>
+      <div class="card reveal">
+        <h3>A Litchfield County farmhouse</h3>
+        <p>A bedrock well nobody is treating, running hard, carrying iron, and occasionally announcing itself with sulfur. Two of these on the same road can test completely differently.</p>
+      </div>
+    </div>
+    <p class="lede reveal" style="margin-top:2rem;">Same company, same technicians, three entirely different builds. That is the job, and it is the reason we test first and talk second.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Plainly</p>
+      <h2>What we are not.</h2>
+    </div>
+    <div class="grid-2">
+      <div class="card reveal"><h3>We are not a scare campaign</h3><p>You will not get a demonstration involving electrodes and a beaker of brown water on your kitchen counter. That test measures dissolved solids, not danger, and it is theatre. We hand you a lab panel instead.</p></div>
+      <div class="card reveal"><h3>We are not a subscription</h3><p>You buy a system, you own it. Filters and salt are consumables with a published cost, and you can buy them from us or from anyone else. Nothing stops working if you stop paying us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <h2>Have a look at your water with us.</h2>
+      <p class="lede">Free, on-site, about forty-five minutes, and you keep the numbers whatever you decide.</p>
+      <div class="btn-row">
+        <a class="btn btn-brass" href="#contact">Email us</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="view" id="page-contact" data-view="contact" data-label="Contact" hidden>
+<section class="page-head">
+  <div class="wrap">
+    <p class="crumb"><a href="#home">Home</a> &nbsp;/&nbsp; Contact</p>
+    <h1>Let's test your water.</h1>
+    <p class="lede">Free, on site, about forty-five minutes. You get real numbers for your own tap and a written recommendation &mdash; whether or not you buy anything from us.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split" style="align-items:start;">
+    <div class="reveal">
+      <p class="eyebrow">Email us</p>
+      <h2>Tell us where you are and what you've noticed.</h2>
+      <p>The more you can tell us up front, the more useful the visit is. If you already have a water quality report or a lab panel, mention it &mdash; we will read it before we come out.</p>
+
+      <form class="form-card" data-quote-form action="https://formsubmit.co/ajax/purgowater@outlook.com" method="POST" style="margin-top:1.8rem;">
+        <input type="hidden" name="_subject" value="New water test request — purgowater.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="grid-2" style="gap:0 1rem;">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+
+        <div class="grid-2" style="gap:0 1rem;">
+          <div class="field">
+            <label for="region">Where you are</label>
+            <select id="region" name="region" required>
+              <option value="">Choose one</option>
+              <option>New York City</option>
+              <option>Westchester County</option>
+              <option>New Jersey</option>
+              <option>Connecticut</option>
+              <option>Somewhere else nearby</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="zip">Zip code</label>
+            <input id="zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code">
+          </div>
+        </div>
+
+        <div class="grid-2" style="gap:0 1rem;">
+          <div class="field">
+            <label for="supply">Your supply</label>
+            <select id="supply" name="supply">
+              <option value="">Choose one</option>
+              <option>City / municipal water</option>
+              <option>Private well</option>
+              <option>Not sure</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="property">Property type</label>
+            <select id="property" name="property">
+              <option value="">Choose one</option>
+              <option>House</option>
+              <option>Apartment or co-op</option>
+              <option>Multi-family building</option>
+              <option>Commercial</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="notes">What have you noticed?</label>
+          <textarea id="notes" name="notes" placeholder="Scale on the kettle, orange staining, a smell, bad-tasting coffee, a quote from someone else you'd like a second opinion on&hellip;"></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Send</button>
+        <p class="form-note">We will email you within one business day to book a time. No deposit, no obligation, and you keep the test results either way.</p>
+        <div class="form-ok"><strong>Thanks &mdash; that's with us.</strong> We'll email you within one business day to find a time that works.</div>
+        <div class="form-error"><strong>Something went wrong.</strong> Please try again, or email us directly at <a href="mailto:purgowater@outlook.com">purgowater@outlook.com</a>.</div>
+      </form>
+    </div>
+
+    <div class="reveal">
+      <div class="feature">
+        <h3>Reach us directly</h3>
+        <ul class="spec-list">
+          <li><strong>Email.</strong> <a href="mailto:purgowater@outlook.com">purgowater@outlook.com</a></li>
+          <li><strong>Existing customers.</strong> Service and warranty requests go to the same email. Ask for your install technician by name.</li>
+          <li><strong>Emergencies.</strong> If water is coming out of something it should not be, shut off your main valve and email us right away.</li>
+        </ul>
+      </div>
+
+      <div class="feature" style="margin-top:1.5rem;">
+        <h3>What the visit involves</h3>
+        <p style="font-size:.96rem;color:var(--muted);">About forty-five minutes. A technician tests at your tap for hardness, chlorine, total dissolved solids, pH and iron, looks at your service entry and your heater, and talks through what your options actually are.</p>
+        <p style="font-size:.96rem;color:var(--muted);">On a private well we also draw a sample for a certified lab. Results usually come back within a week.</p>
+        <p style="font-size:.96rem;color:var(--muted);">There is no charge for any of this, and no obligation to buy anything. If the honest answer is that your water is fine, that is the answer you will get.</p>
+      </div>
+
+      <div class="feature" style="margin-top:1.5rem;">
+        <h3>Serving</h3>
+        <p style="font-size:.96rem;color:var(--muted);">All five boroughs of New York City &middot; Westchester County &middot; northern and central New Jersey &middot; Fairfield, New Haven and Litchfield counties, Connecticut.</p>
+        <a class="card-link" href="#service-areas">Full coverage details &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#home">
+          <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M16 2.5S6 13.2 6 20a10 10 0 0 0 20 0c0-6.8-10-17.5-10-17.5z" fill="#2F5A4E" stroke="#CFE0DA" stroke-width="1.6"/>
+            <path d="M11 21.8v-4.4l5-3.7 5 3.7v4.4z" stroke="#CFE0DA" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          <span>
+            <span class="brand-name">Purgō</span>
+            <span class="brand-sub">Water</span>
+          </span>
+        </a>
+        <p>Home water treatment for New York City, Westchester, New Jersey and Connecticut — designed, installed and maintained by our own licensed team.</p>
+      </div>
+
+      <div>
+        <h4>Systems</h4>
+        <ul>
+          <li><a href="#whole-home">Whole Home Systems</a></li>
+          <li><a href="#drinking-water">Drinking Water Systems</a></li>
+          <li><a href="#add-ons">Add-ons &amp; Protection</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#our-story">Our Story</a></li>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#service-areas">Service Areas</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="mailto:purgowater@outlook.com">purgowater@outlook.com</a></li>
+          <li>Mon–Sat, 8am–6pm</li>
+          <li>Emergency service available</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Purgō Water. All rights reserved.</span>
+      <span>Licensed &amp; insured · NY · NJ · CT</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Purgō Water — shared behaviour */
+
+/* ---------- mobile nav + dropdowns ---------- */
+(function () {
+  var header = document.querySelector('.site-header');
+  var burger = document.querySelector('.hamburger');
+  if (burger && header) {
+    burger.addEventListener('click', function () {
+      var open = header.getAttribute('data-menu') === 'open';
+      header.setAttribute('data-menu', open ? 'closed' : 'open');
+      burger.setAttribute('aria-expanded', String(!open));
+    });
+  }
+
+  document.querySelectorAll('.nav-drop').forEach(function (drop) {
+    var btn = drop.querySelector('button');
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = drop.getAttribute('data-open') === 'true';
+      document.querySelectorAll('.nav-drop').forEach(function (d) {
+        d.setAttribute('data-open', 'false');
+      });
+      drop.setAttribute('data-open', String(!open));
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+  });
+
+  document.addEventListener('click', function () {
+    document.querySelectorAll('.nav-drop').forEach(function (d) {
+      d.setAttribute('data-open', 'false');
+    });
+  });
+})();
+
+/* ---------- scroll reveal ---------- */
+(function () {
+  var items = document.querySelectorAll('.reveal');
+  if (!items.length || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
+  items.forEach(function (el) { io.observe(el); });
+})();
+
+/* ---------- signature: "what's in your tap" lookup ----------
+   These are the general patterns we see region to region.
+   They are starting points for the conversation, not a substitute
+   for the on-site test every install begins with.
+------------------------------------------------------------- */
+var TAP_DATA = {
+  nyc: {
+    label: 'New York City',
+    source: 'Catskill / Delaware & Croton reservoirs, unfiltered surface water',
+    hardness: '~1–2',
+    hardnessNote: 'grains per gallon — soft',
+    disinfectant: 'Chlorine',
+    disinfectantNote: 'plus orthophosphate',
+    age: '100+ yrs',
+    ageNote: 'typical main age',
+    findings: ['Chlorine taste & odor', 'Sediment from old mains', 'Lead risk at the building, not the reservoir', 'Rooftop tank carryover'],
+    story: 'The reservoir water arriving in the five boroughs is genuinely good and genuinely soft. What changes it is the last hundred feet — century-old cast iron mains, building risers, solder joints in pre-1987 plumbing, and rooftop tanks. So in the city we rarely soften. We filter for what the building adds.',
+    rec: 'Whole-home carbon + sediment for the taste and grit, and a reverse osmosis unit at the kitchen tap if your building predates 1987.'
+  },
+  westchester: {
+    label: 'Westchester',
+    source: 'NYC aqueduct in the south, local reservoirs and private wells further north',
+    hardness: '1–12',
+    hardnessNote: 'grains per gallon — varies widely',
+    disinfectant: 'Chlorine',
+    disinfectantNote: 'well water: none',
+    age: 'Mixed',
+    ageNote: 'municipal & private well',
+    findings: ['Hardness north of I-287', 'Iron & manganese staining', 'Well water with no disinfection', 'Seasonal turbidity'],
+    story: 'Westchester is really two water stories. Yonkers, Mount Vernon and the river towns drink much the same soft aqueduct water as the city. Head north toward Somers, North Salem or Lewisboro and you are often on a private well drawing through bedrock — harder, higher in iron, and untreated.',
+    rec: 'South county: carbon filtration and drinking water. North county: a full test first, then usually a softener plus iron removal and UV.'
+  },
+  nj: {
+    label: 'New Jersey',
+    source: 'Mix of surface reservoirs and groundwater aquifers by utility',
+    hardness: '5–15',
+    hardnessNote: 'grains per gallon — moderate to hard',
+    disinfectant: 'Chlorine',
+    disinfectantNote: 'or chloramine',
+    age: 'Varies',
+    ageNote: 'by utility district',
+    findings: ['Scale on fixtures and heaters', 'PFAS in some districts', 'Chloramine taste', 'Aquifer hardness'],
+    story: 'New Jersey water depends heavily on which utility serves your block, and neighbouring towns can differ sharply. Hardness is common enough that most homes see scale on the kettle and the shower door. The state has also been among the most active in the country on PFAS limits, which is why we default to including carbon in Jersey builds.',
+    rec: 'Softener plus carbon as the base, and reverse osmosis for drinking. We pull your utility\'s current water quality report before quoting.'
+  },
+  ct: {
+    label: 'Connecticut',
+    source: 'Roughly a third of homes on private bedrock wells',
+    hardness: '7–20',
+    hardnessNote: 'grains per gallon — hard',
+    disinfectant: 'None',
+    disinfectantNote: 'on private wells',
+    age: 'Bedrock',
+    ageNote: 'typical well type',
+    findings: ['Hard water and scale', 'Iron and manganese', 'Sulfur odor', 'No disinfection on wells'],
+    story: 'A large share of Connecticut homes draw from private bedrock wells, which means no utility is treating anything before it reaches you. What comes up is usually hard, often carries iron or manganese, and sometimes brings the rotten-egg smell of hydrogen sulfide. It is also the region where a proper lab test matters most, because two wells on the same road can read completely differently.',
+    rec: 'A dual-tank well build: softening plus iron and sulfur removal, with UV for bacterial protection. Always after a full lab panel.'
+  }
+};
+
+(function () {
+  var picker = document.querySelector('[data-picker]');
+  var out = document.querySelector('[data-readout]');
+  if (!picker || !out) return;
+
+  function render(key) {
+    var d = TAP_DATA[key];
+    if (!d) return;
+    out.innerHTML =
+      '<dl class="metrics">' +
+        '<div class="metric"><dt>Hardness</dt><dd>' + d.hardness + '<small>' + d.hardnessNote + '</small></dd></div>' +
+        '<div class="metric"><dt>Disinfectant</dt><dd>' + d.disinfectant + '<small>' + d.disinfectantNote + '</small></dd></div>' +
+        '<div class="metric"><dt>Delivery</dt><dd>' + d.age + '<small>' + d.ageNote + '</small></dd></div>' +
+      '</dl>' +
+      '<span class="report-label">What we usually find</span>' +
+      '<ul class="tag-list">' + d.findings.map(function (f) { return '<li>' + f + '</li>'; }).join('') + '</ul>' +
+      '<p>' + d.story + '</p>' +
+      '<div class="rec">' +
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>' +
+        '<span><strong>Where we usually start:</strong> ' + d.rec + '</span>' +
+      '</div>';
+  }
+
+  picker.addEventListener('click', function (e) {
+    var btn = e.target.closest('button[data-region]');
+    if (!btn) return;
+    picker.querySelectorAll('button').forEach(function (b) { b.setAttribute('aria-pressed', 'false'); });
+    btn.setAttribute('aria-pressed', 'true');
+    render(btn.getAttribute('data-region'));
+  });
+
+  render('nyc');
+})();
+
+/* ---------- quote form ---------- */
+(function () {
+  var form = document.querySelector('[data-quote-form]');
+  if (!form) return;
+  var submitBtn = form.querySelector('button[type="submit"]');
+  var submitLabel = submitBtn ? submitBtn.textContent : '';
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var ok = form.querySelector('.form-ok');
+    var err = form.querySelector('.form-error');
+    if (ok) ok.style.display = 'none';
+    if (err) err.style.display = 'none';
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+    }
+
+    fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Request failed');
+        return res.json();
+      })
+      .then(function () {
+        if (ok) {
+          ok.style.display = 'block';
+          ok.setAttribute('role', 'status');
+          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        form.reset();
+      })
+      .catch(function () {
+        if (err) {
+          err.style.display = 'block';
+          err.setAttribute('role', 'status');
+          err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      })
+      .finally(function () {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        }
+      });
+  });
+})();
+
+/* ---------- year ---------- */
+document.querySelectorAll('[data-year]').forEach(function (el) {
+  el.textContent = new Date().getFullYear();
+});
+
+/* ============================================================
+   Water — behaviour
+   ============================================================ */
+
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- tide: scroll progress ---------- */
+(function () {
+  var bar = document.createElement('div');
+  bar.className = 'tide';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+
+  var ticking = false;
+  function update() {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    var pct = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = Math.min(100, Math.max(0, pct)) + '%';
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { window.requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  window.addEventListener('resize', update, { passive: true });
+  update();
+})();
+
+/* ---------- bubbles in the dark bands ---------- */
+(function () {
+  if (REDUCED) return;
+  document.querySelectorAll('.cta-band, .band-ink').forEach(function (band) {
+    for (var i = 0; i < 14; i++) {
+      var b = document.createElement('span');
+      var size = 5 + Math.random() * 16;
+      b.className = 'bubble';
+      b.style.width = size + 'px';
+      b.style.height = size + 'px';
+      b.style.left = Math.random() * 98 + '%';
+      b.style.animationDuration = (9 + Math.random() * 12).toFixed(1) + 's';
+      b.style.animationDelay = (Math.random() * 10).toFixed(1) + 's';
+      band.appendChild(b);
+    }
+  });
+})();
+
+/* ---------- gentle parallax on the wave edges ---------- */
+(function () {
+  if (REDUCED) return;
+  var bands = Array.prototype.slice.call(
+    document.querySelectorAll('.band-paper, .band-tile, .band-ink')
+  );
+  if (!bands.length) return;
+
+  var ticking = false;
+  function move() {
+    bands.forEach(function (band) {
+      var box = band.getBoundingClientRect();
+      if (box.bottom < -200 || box.top > window.innerHeight + 200) return;
+      var progress = (window.innerHeight - box.top) / (window.innerHeight + box.height);
+      band.style.setProperty('--sway', (progress * 26 - 13).toFixed(1) + 'px');
+    });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { window.requestAnimationFrame(move); ticking = true; }
+  }, { passive: true });
+  move();
+})();
+
+
+/* ---------- single-file router ---------- */
+(function () {
+  var views = Array.prototype.slice.call(document.querySelectorAll('.view'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('a[href^="#"]'));
+  var titleBase = 'Purg\u014d Water';
+
+  function slugFromHash() {
+    var s = (location.hash || '').replace(/^#/, '');
+    return views.some(function (v) { return v.dataset.view === s; }) ? s : 'home';
+  }
+
+  function show(slug, doScroll) {
+    views.forEach(function (v) { v.hidden = v.dataset.view !== slug; });
+
+    links.forEach(function (a) {
+      var target = a.getAttribute('href').replace(/^#/, '');
+      if (target === slug) { a.setAttribute('aria-current', 'page'); }
+      else { a.removeAttribute('aria-current'); }
+    });
+
+    var active = views.filter(function (v) { return v.dataset.view === slug; })[0];
+    document.title = (slug === 'home')
+      ? titleBase + ' \u2014 Home Water Filtration in NYC, Westchester, New Jersey & Connecticut'
+      : active.dataset.label + ' | ' + titleBase;
+
+    /* close the mobile menu on navigation */
+    var header = document.querySelector('.site-header');
+    if (header) header.setAttribute('data-menu', 'closed');
+    var burger = document.querySelector('.hamburger');
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+
+    /* the main observer keeps watching hidden nodes and fires when they
+       become visible; this is just a safety net for anything it misses */
+    if (active) {
+      setTimeout(function () {
+        active.querySelectorAll('.reveal:not(.in)').forEach(function (el) {
+          var box = el.getBoundingClientRect();
+          if (box.top < window.innerHeight) el.classList.add('in');
+        });
+      }, 500);
+    }
+
+    if (doScroll) window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  window.addEventListener('hashchange', function () { show(slugFromHash(), true); });
+  show(slugFromHash(), false);
+})();
+
+</script>
+</body>
+</html>
